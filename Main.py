@@ -37,7 +37,7 @@ def AddPost (text):
         return not_added
 
 def DeletePost (keyword): # Удалить статью
-    posts = GetAllPosts ()
+    posts = GetAllPosts()
     deletedPost = nothing_find
 
     for post in posts:
@@ -58,7 +58,7 @@ def LoadPost (keyword): # Загрузка статьи по ключевому 
         if keyword in post:
             currentPost = post
             break
-    return "Найдена статья:\n" + post
+    return "Найдена статья:\n" + currentPost
 
 def GetAllPosts (): # Загрузить все посты
     p = []
@@ -66,8 +66,8 @@ def GetAllPosts (): # Загрузить все посты
     try:
         with open(data_file_name, 'rb') as f:
             p = pickle.load(f)
-    except:
-        print ("[Ошибка загрузки данных]")
+    except Exception as e:
+        print ("[Ошибка загрузки данных] " + e)
 
     return p
     
