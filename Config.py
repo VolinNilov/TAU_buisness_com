@@ -5,7 +5,7 @@ hello_message = "Привет!"
 nothing_find = "Ничего не найдено, извините"
 successfull_added = "Статья успешно добавлена!"
 not_added = "Статья не добавлена. обратитесь к Администратору"
-not_added_exists = "Статья уже существует"
+not_added_exists = "Статья уже существует" 
 
 add_post_command = "add"
 show_all_posts_command = "show"
